@@ -35,6 +35,14 @@ Observations:
   (60 vs 42): the tokenizer has seen real Russian words, but not ad-hoc
   transliteration, so it falls back to short fragments.
 
-Caveats: one short text, one translation, and these are OpenAI tokenizers,
+### 2. Randomness: coffee shop name in three fresh chats
+
+`experiments/randomness/` — the same prompt asked three times, each in a new chat.
+Two of three main answers were identical («Зерно & Час»), the third differed by one
+word. See [the write-up](experiments/randomness/README.md).
+
+---
+
+Tokenization caveats: one short text, one translation, and these are OpenAI tokenizers,
 not Claude's. Counts for Claude models will differ, but the general pattern
 (English cheapest, low-resource languages costlier) is expected to hold.
